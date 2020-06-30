@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": "http://localhost/store/backend/api/",
+      "secure": false
+    }
+  }

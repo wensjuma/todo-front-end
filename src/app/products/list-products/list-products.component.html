@@ -1,0 +1,67 @@
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<button (click) ="addNew()" class="btn btn-primary"> create new todos </button>
+<input type="text" placeholder="Search tasks by status" class="form-control">
+<div class="row">
+    <div class="col-md-4">
+       <span class="badge badge-info"> started</span>
+        <table class="table table-responsive" id="customers">
+            <tr>
+                <th>New Task</th>
+                <th>Date created</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr> 
+            <tr *ngFor="let todo of todos">
+                <td>{{todo.item}}</td>
+                <td>{{todo.addDate}}</td>
+                <!-- <td><small *ngIf="todo.todoStatu === '1'" class="badge badge-warning">uncompleted</small></td> -->
+                <td>{{todo.description}}</td>           
+                <td>  &nbsp; <button (click)="assign()">Assign user</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-4">      
+<span class="badge badge-info">Progress</span>
+        <table id="customers">
+            <tr>
+                <th>Task</th>
+                <th>Date created</th>
+                <th>Action</th>
+            </tr>
+        
+            <tr *ngFor="let todo of progress">
+                <td>{{todo.item}}</td>
+                <td>{{todo.addDate}}</td>
+                <!-- <td><small *ngIf="todo.todoStatu === '1'" class="badge badge-warning">uncompleted</small></td> -->
+                <!-- <td>{{todo.description}}</td> -->
+               
+                <td> &nbsp; <button class="btn btn-success" (click)="edit()">mark complete</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-4">
+        
+        <span class="badge badge-info"> completed</span>
+        <table id="customers">
+            <tr>
+                <th>Task</th>
+                <th>Date created</th>
+                
+                <!-- <th>Description</th> -->
+        
+                <!-- <th>Action</th> -->
+            </tr>
+        
+            <tr *ngFor="let compl of complete">
+                <td>{{compl.item}}</td>
+                <td>{{compl.addDate}}</td>
+                <!-- <td><small *ngIf="todo.todoStatu === '1'" class="badge badge-warning">uncompleted</small></td> -->
+                <!-- <td>{{todo.description}}</td> -->
+               
+                <!-- <td> &nbsp; <button (click)="edit()">edit</button></td> -->
+            </tr>
+        </table>
+    </div>
+</div>

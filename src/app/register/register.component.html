@@ -1,0 +1,26 @@
+<html>
+
+<body>
+
+    <h3>Register </h3>
+
+    <div>
+        <form>
+            <label for="fname">Username</label>
+            <input [(ngModel)]="username" type="text" id="fname" name="firstname" placeholder="user name..">
+            <label for="fname">Password</label>
+            <input [(ngModel)]="password" type="password" id="fname" name="firstname" placeholder="password..">
+            <label for="fname">Re type Password</label>
+            <input [(ngModel)]="re_password" type="password" id="fname" name="firstname" placeholder="password..">
+
+
+            <!-- <label for="lname">Description</label>
+    <textarea [(ngModel)] ="description" type="text" id="lname" name="lastname" placeholder="Description.."></textarea> -->
+
+            <input type="submit" (click)="register()" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>

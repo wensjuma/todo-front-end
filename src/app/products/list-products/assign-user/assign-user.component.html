@@ -1,0 +1,35 @@
+<html>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<body>
+
+<h3>Asign a task to a user </h3>
+
+<div>
+ <div class="row">
+   <div class="col-md-3"></div>
+   <div class="col-md-6">
+    <form>
+   
+      
+      <!-- <label for="lname">Description</label>
+      <textarea [(ngModel)] ="description" type="text" id="lname" name="lastname" placeholder="Description.."></textarea> -->
+  
+      <label for="user">Select user to assign</label>
+      <select class="form-control" [(ngModel)] ="user_id" id="country" name="user">
+        <option *ngFor="let user of users" value="{{user.user_id}}">{{user.username}}</option>
+        
+        
+      </select>
+   <br>
+    
+      <input class="btn btn-info" type="submit" (click)="submit()" value="Submit">
+    </form>
+   </div>
+   <div class="col-md-3"></div>
+ </div>
+</div>
+
+</body>
+</html>
